@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 62.5%;
+  /* 1rem = 10px, 10px/16px = 62.5% */
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.603)), url(./img/bg.jpg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 120vh; */
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  /* background: aqua; */
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 5em;
+  color: #E2D8D8;
+}
+
+.title {
+  font-size: 1.2em;
+  padding-bottom: 1rem;
+  margin-top: -3.1rem;
+
+}
+
+.author {
+  font-style: italic;
+  padding-top: 1rem;
+}
+
+.quote {
+  font-size: 2em;
+}
+
+.quote-list {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+  /* grid-template-rows: 30% 30%; */
+  grid-template-areas:
+    ". box1 box2 box3 ."
+    ". box4 box5 box6 ."
+    ". box7 box8 box9 ."
+    ". box10 box11 box12 .";
+  grid-gap: 5rem;
+  color: #C9C9C9;
+  font-size: 1.3em;
+
+}
+
+.quote-container {
+  height: 28vh;
+  text-align: center;
+  padding: 10%;
+}
+
+.quote-container:nth-of-type(1) {
+  grid-area: box1;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)), url(./img/motivation.jpeg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.quote-container:nth-of-type(2) {
+  grid-area: box2;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/love.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(3) {
+  grid-area: box3;
+  background: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.685)),
+    url(./img/friends.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(4) {
+  grid-area: box4;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/life.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(5) {
+  grid-area: box5;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/food.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(6) {
+  grid-area: box6;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(7) {
+  grid-area: box7;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(8) {
+  grid-area: box8;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(9) {
+  grid-area: box9;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(10) {
+  grid-area: box10;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(11) {
+  grid-area: box11;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(12) {
+  grid-area: box12;
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.568)),
+    url(./img/death.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.quote-container:nth-of-type(n + 13) {
+  display: none;
+}
+
+.btn {
+  border: none;
+  background: #141414;
+  color: #ffffff;
+  font-weight: 100;
+  padding: 10px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+
+form {
+  color: #C9C9C9;
+  font-size: 2.2em;
+  display: flex;
+  flex-direction: column;
+  margin: -5rem auto;
+  width: 10%;
+}
+
+label {
+  padding-top: 5rem;
+}
+
+input {
+  height: 3.5vh;
+  background: #141414;
+  border: 1px solid #2b2a2a;
+}
+
+input:nth-of-type(2) {
+  height: 10vh;
+}
+
+.form-container button {
+  border: none;
+  background: #141414;
+  color: #ffffff;
+  font-weight: 100;
+  padding: 10px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
